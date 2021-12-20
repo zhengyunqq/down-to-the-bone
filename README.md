@@ -27,6 +27,9 @@ enable-tftp
 tftp-root=/tmp/tftp
 dhcp-boot=beagle.img
 ```
+-------
+At startup, dnsmasq reads /etc/dnsmasq.conf, if it exists. (On FreeBSD, the file is /usr/local/etc/dnsmasq.conf ) (but see the --conf-file and --conf-dir options.) The format of this file consists of one option per line, exactly as the long options detailed in the OPTIONS section but without the leading "--". Lines starting with # are comments and ignored. For options which may only be specified once, the configuration file overrides the command line. Quoting is allowed in a config file: between " quotes the special meanings of ,:. and # are removed and the following escapes are allowed: \\ \" \t \e \b \r and \n. The later corresponding to tab, escape, backspace, return and newline.  
+-------
 
 Restart dnsmasq
 ``` sh
